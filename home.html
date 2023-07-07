@@ -5,7 +5,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <title>Pool made easy by Snuka</title>
   <style>
+@media only screen and (max-width: 767px) {
+    /* Adjustments for small screens here */
+
     body {
+        /* Example: Adjust body styles for small screens */
+        justify-content: flex-start;
+    }
+
+    main {
+        /* Example: Adjust main styles for small screens */
+        height: auto;
+        width: 100%;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .display-board {
+        /* Example: Adjust display-board styles for small screens */
+        width: 100%;
+    }
+
+    #right-button {
+        /* Example: Adjust right-button styles for small screens */
+        top: 5px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .floating-element {
+        /* Example: Adjust floating-element styles for small screens */
+        top: 5px;
+        left: 5px;
+        font-size: 18px;
+        width: 22px;
+        padding: 2px;
+    }
+
+    .fom {
+        /* Example: Adjust fom styles for small screens */
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        
+    }
+
+    /* Add more adjustments as needed for other elements */
+}
+
+body {
       display: flex;
       justify-content: center;
       margin: 0;
@@ -19,7 +69,6 @@
       justify-content: center;
       height: 95vh;
       margin-top: 5px;
-      width: 320px;
       background-color: #f2f2f2;
       padding: 2px;
       position: absolute;
@@ -28,7 +77,6 @@
     
     
     .display-board{
-      width: 310px;
       height: 18vh;
       border-radius: 7px;
       display: flex;
@@ -42,7 +90,7 @@
       top: 5px;
       right: 10px;
       background-color: whitesmoke;
-      width: 50px;
+      
       height: 5vh;
       border-radius: 3px;
       border: none;
@@ -62,7 +110,7 @@
       color: rgb(5, 214, 5);
       background-color: whitesmoke;
       padding: 3px;
-      width: 27px;
+      
       border-radius: 3px;
       border: none;
       cursor: pointer;
@@ -72,17 +120,17 @@
       color: rgb(4, 94, 4); 
     }
     .fom {
-      width: 300px;
+      color: whitesmoke;
       height: 80vh;
       padding: 5px;
       margin:auto;
       background-color: brown;
       display:none;
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
       z-index: 9999;
 
     }
@@ -107,18 +155,15 @@
       color: rgb(8, 184, 8);
     }
     .top-section{
-      width: 305px;
       height: 8vh;
       padding-left: 35px;
     }
     
     #display-players{
-      width: 200px;
       font-size: 18px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .lower-section{
-      width: 305px;
       height: 9vh;
       display: flex;
       border: 1px solid #ccc;
@@ -127,7 +172,6 @@
     .display-box{
       
       flex: 1;
-      width: 50px;
       border: 1px solid #ccc;
       margin: 5px;
       border-radius: 5px;
@@ -135,12 +179,10 @@
     }
     #numberDisplay{
       flex:2;
-      width: 100px;
       margin: 5px;
     }
     .balls {
       padding: 5px;
-      max-width: 310px;
       border-radius: 7px;
       margin-top: 2px;
       height: 80vh;
@@ -150,27 +192,27 @@
 
     .container{
       flex: 1;
-      max-width: 270px;
+      min-width: 300px;
       height: 67vh;
       display: flex;
       border: 1px solid #ccc;
       flex-direction: column;
     }
     .row{
-      width: 262px;
+      min-width: 292px;
       height: 16.5vh;
       display: flex;
       flex-direction: row;
     }
     .fixed-ball{
-      width: 64px;
+      min-width: 94px;
       display: flex;
       flex-direction: row;
       justify-content: center;
 
     }
     .sphere {
-      width: 63px;
+      min-width: 93px;
       border-radius: 50%;
       height: 16vh;
       font-size: 18px;
@@ -300,13 +342,13 @@
 
     footer {
       color: whitesmoke;
-      width: 320px;
       background-color: black;
       padding: 5px;
       text-align: center;
       position: fixed;
       top: 90vh;
       bottom: 0;
+      max-width: 767px
 
     }
     .social-icons {
@@ -316,7 +358,7 @@
     }
 
     .social-icons a {
-      width: 70px;
+      width: 110px;
       display: inline-block;
       height: 9vh;
       cursor: pointer;
@@ -845,6 +887,7 @@ buttons.forEach(button => {
     location.reload();
   });
 });
+
     </script>
     
 </body>
